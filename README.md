@@ -1,8 +1,8 @@
-## JavaScript
+# JavaScript
 
 Repo for a beginner JavaScript Programmer
 
-# Steps to Run the code
+## Steps to Run the code
 
 - We can run the JS code in the browser
 - Have an extension names "Live Server" installed in the VS code
