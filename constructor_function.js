@@ -1,18 +1,33 @@
+//Constructor function
 function Person(firstName, lastName, dob) {
     this.firstName = firstName;
     this.lastName = lastName;
-    this.dob = dob;
+    this.dob = new Date(dob);
+    this.getBirthYear = function() {
+        return this.dob.getFullYear()
+    }
+
+    this.getFullName = function() {
+        return `${this.firstName} ${this.lastName}`;
+    }
 }
 
 // Instantiate object
-const person1 = new Person('Kumar', 'Doe', '4-3-1980');
-console.log(person1);
+const person1 = new Person('John', 'Doe', '1995-05-17T03:24:00');
+console.log(person1.getBirthYear());
+console.log(person1.dob.getMonth());
+console.log(person1.getFullName())
 
-const person2 = new Person("James", "Bond", "13-07-1997")
-console.log(person2)
+console.log("-------------------------------------------");
 
-const person3 = new Person("Sherlock", "Holmes", "14-07-1980")
-console.log(person3);
+const person2 = new Person('James', 'Bond', '10/08/1970');
+console.log(person2.dob.getMonth());
+console.log(person2.getFullName());
+
+
+const person4 = new Person('Sherlock', 'Holmes', '5/10/2000');
+console.log(person4.dob.getFullYear());
+console.log(person4.getFullName());
 
 function Book(bookName, bookAuthor, bookPrice) {
     this.bookName = bookName;
